@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>从线条开始</title>
+  <style>
+    canvas {
+      display: block;
+      border: 1px solid #aaaaaa;
+      margin: 50px auto;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="canvas">
+    test
+  </canvas>
+
+  <script>
+    window.onload = function () {
+      const canvas = document.querySelector('#canvas');
+      canvas.width = 800;
+      canvas.height = 600;
+      const context = canvas.getContext("2d");
+
+      context.moveTo(100, 100);
+      context.lineTo(500, 500);
+      context.linWidth = 5;
+      context.strokeStyle = "#AA394C";
+      context.stroke();
+    }
+  </script>
+</body>
+</html>
