@@ -20,7 +20,7 @@ context.strokeStyle = '#000000';
 context.stroke();
 ```
 
- ## 2. [多线条组成图形](./src/index2.html)
+## 2. [多线条组成图形](./src/index2.html)
 ```javascript
 // 设定绘制起始处
 context.beginPath();
