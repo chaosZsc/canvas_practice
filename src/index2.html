@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>多线条组成图形</title>
+  <style>
+    canvas {
+      display: block;
+      border: 1px solid #aaaaaa;
+      margin: 50px auto;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="canvas">
+    test
+  </canvas>
+
+  <script>
+    window.onload = function () {
+      const canvas = document.querySelector('#canvas');
+      canvas.width = 800;
+      canvas.height = 600;
+      const context = canvas.getContext('2d');
+
+      context.beginPath();
+      context.moveTo(100, 100);
+      context.lineTo(300, 300);
+      context.lineTo(100, 500);
+      context.lineWidth = 5;
+      context.strokeStyle = 'red';
+      context.stroke();
+
+      context.beginPath();
+      context.moveTo(300, 100);
+      context.lineTo(500, 300);
+      context.lineTo(300, 500);
+      context.lineWidth = 5;
+      context.strokeStyle = 'green';
+      context.stroke();
+
+      context.beginPath();
+      context.moveTo(500, 100);
+      context.lineTo(700, 300);
+      context.lineTo(500, 500);
+      context.lineWidth = 5;
+      context.strokeStyle = 'blue';
+      context.stroke();
+    }
+  </script>
+</body>
+</html>
