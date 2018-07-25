@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>绘制矩形</title>
+  <style>
+    canvas {
+      display: block;
+      border: 1px solid #aaaaaa;
+      margin: 50px auto;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="canvas">
+    test
+  </canvas>
+
+  <script>
+    window.onload = function () {
+      const canvas = document.querySelector('#canvas');
+      canvas.width = 800;
+      canvas.height = 600;
+      const context = canvas.getContext('2d');
+
+      const input = prompt('请依次输入矩形线宽及颜色，并以逗号分隔（不填则默认线宽为4，颜色为#000000）');
+      context.lineWidth = 4;
+      context.strokeStyle = '#000000';
+      if (input) {
+        const inputs = input.split(',');
+        context.lineWidth = Number(inputs[0]);
+        context.strokeStyle = inputs[1] || context.strokeStyle;
+      }
+
+      const midpoint = {
+        x: canvas.width / 2,
+        y: canvas.height / 2,
+      };
+
+      for (let index = 0; midpoint.x - 2 * context.lineWidth * index > 0 && midpoint.y - 2 * context.lineWidth * index > 0; index++) {
+        const x = midpoint.x - 2 * context.lineWidth * index - 2;
+        const y = midpoint.y - 2 * context.lineWidth * index - 2;
+        const width = context.lineWidth * (2 * (2 * index + 1) - 1);
+        const height = context.lineWidth * (2 * (2 * index + 1) - 1);
+        context.rect(x, y, width, height);
+        context.stroke();
+      }
+    }
+  </script>
+</body>
+</html>

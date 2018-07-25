@@ -25,3 +25,17 @@ context.stroke();
 // 设定绘制起始处
 context.beginPath();
 ```
+
+## 3. [绘制矩形](./src/index3.html)
+```javascript
+// 闭合图形(最后一笔可以不画)
+context.closePath();
+// 按教程不闭合图形时，最后接缝处会有缺口，现在最新Chrome浏览器中没有出现，估计是优化了。。。
+
+// 填充颜色
+context.fillStyle = 'yellow'
+
+// canvas 矩形api
+context.rect(x, y, width, height);
+```
+>[**魔性方块**](./src/index3-1.html)
