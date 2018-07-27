@@ -42,7 +42,7 @@ context.rect(x, y, width, height);
 
 ## 4. 线条的属性
 1. [`lineCap`](./src/index4-1.html)  
-定义线条两端的样式：
+定义线条两端的样式：
     * `butt`: 默认值，平直边缘。
     * `round`: 以线宽为直径的半圆。
     * `square`: 以线宽为长，以线宽一半为宽的矩形。
