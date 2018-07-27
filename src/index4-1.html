@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>线条的属性：lineCap</title>
+  <style>
+    canvas {
+      display: block;
+      border: 1px solid #aaaaaa;
+      margin: 50px auto;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="canvas">
+    test
+  </canvas>
+
+  <script>
+    window.onload = function () {
+      const canvas = document.querySelector('#canvas');
+      canvas.width = 800;
+      canvas.height = 600;
+      const context = canvas.getContext('2d');
+
+      context.lineWidth = 50;
+      context.strokeStyle = '#1BAAAA';
+
+      context.beginPath();
+      context.moveTo(100, 100);
+      context.lineTo(700, 100);
+      context.lineCap = 'butt';
+      context.stroke();
+
+      context.beginPath();
+      context.moveTo(100, 300);
+      context.lineTo(700, 300);
+      context.lineCap = 'round';
+      context.stroke();
+
+      context.beginPath();
+      context.moveTo(100, 500);
+      context.lineTo(700, 500);
+      context.lineCap = 'square';
+      context.stroke();
+
+      context.beginPath();
+      context.lineWidth = 3;
+      context.strokeStyle = 'black';
+      context.moveTo(100, 0);
+      context.lineTo(100, 600);
+      context.moveTo(700, 0);
+      context.lineTo(700, 600);
+      context.stroke();
+    }
+  </script>
+</body>
+</html>
