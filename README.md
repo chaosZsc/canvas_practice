@@ -39,3 +39,20 @@ context.fillStyle = 'yellow'
 context.rect(x, y, width, height);
 ```
 >[**魔性方块**](./src/index3-1.html)
+
+## 4. 线条的属性
+1. [`lineCap`](./src/index4-1.html)  
+定义线条两端的样式：
+    * `butt`: 默认值，平直边缘。
+    * `round`: 以线宽为直径的半圆。
+    * `square`: 以线宽为长，以线宽一半为宽的矩形。
+2. [`lineJoin`](./src/index4-2.html)  
+定义两条线相交的拐角样式：
+    * `miter`: 默认值，在连接处边缘延长相接。  
+        > [`miterLimit`](./src/index4-3.html)（了解下）
+    * `bevel`: 对角线斜角。
+    * `round`: 圆。
+3. `lineWidth`  
+定义线的宽度。
+4. `strokeStyle`
+定义线边框颜色和样式。
